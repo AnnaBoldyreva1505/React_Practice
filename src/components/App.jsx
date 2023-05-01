@@ -1,13 +1,12 @@
-import { RecipeList } from "./RecipeList/RecipeList";
-import recipes from "../recipes.json";
-import { GlobalStyle } from "./GlobalStyle";
 import {Layout} from './Layout'
+import Counter from "./Counter/Counter";
+import Dropdown from "./Dropdown/Dropdown";
 
 export const App = () => {
   return (
     <Layout>
-      <RecipeList items={recipes}/>
-      <GlobalStyle />
+        {/* <Counter initialValue={10}/> */}
+        <Dropdown/>
     </Layout>
   );
 };
