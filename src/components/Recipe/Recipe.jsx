@@ -107,6 +107,6 @@ Recipe.propTypes = {
     servings: PropTypes.number.isRequired,
     calories: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
-    difficulty: PropTypes.oneOf(Object.values.RecipeDifficulty).isRequired,
+    // difficulty: PropTypes.oneOf(Object.values.RecipeDifficulty).isRequired,
   }).isRequired,
 };

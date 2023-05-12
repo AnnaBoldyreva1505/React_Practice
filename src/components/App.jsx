@@ -10,6 +10,14 @@ export class App extends Component {
     recipes: initialRecipes,
   }
 
+  addRecipe = newRecipe => {
+    this.setState(prevState => {
+      return {
+        recipes: [...prevState.recipes, newRecipe]
+      }
+    })
+  }
+
   deleteRecipes = recipeId => {
     this.setState(prevState => {
       return {
@@ -27,7 +35,7 @@ export class App extends Component {
   render(){
     return (
       <>
-      <RecipeForm />
+      <RecipeForm onAdd={this.addRecipe}/>
       {/* при передачи пропсом метода класса в компонент принято называть их on... действие (onDelete, onChange и т.п.) */}
         <RecipeList items={this.state.recipes} onDelete={this.deleteRecipes} />
         
