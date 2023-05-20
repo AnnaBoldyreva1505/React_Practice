@@ -1,26 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
-import {ThemeProvider} from 'styled-components'
-//если используется стайл компонентс нужно использовать тимизацию (Theming) https://styled-components.com/docs/advanced#theming
+import ReactDOM from 'react-dom';
+import 'modern-normalize/modern-normalize.css';
+import './index.css';
+import 'react-toastify/dist/ReactToastify.css';
+import App from './App';
 
-const theme = {
-colors: {
-  black: '#252525',
-  white: '#ffffff',
-  accent: 'tomato',
-},
-radii: {
-  sm: '2px',
-  md: '4px',
-  lg: '8px',
-},
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-      <ThemeProvider theme={theme}>
     <App />
-    </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root'),
 );
