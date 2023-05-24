@@ -1,4 +1,9 @@
+import { createGlobalStyle } from 'styled-components';
+import 'modern-normalize';
+
+export const GlobalStyle = createGlobalStyle`
 body {
+  margin: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,26 +16,13 @@ code {
     monospace;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+p {
+  margin: 0;
 }
 
-button {
-  cursor: pointer;
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-.icon-spin {
-  margin-right: 10px;
-  animation: icon-spin 2s infinite linear;
-}
-
-@keyframes icon-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
+`;
